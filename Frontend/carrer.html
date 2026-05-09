@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers - CareerPro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #ff6b00;
+      --primary-dark: #e55a00;
+      --dark: #111;
+      --transition: all 0.4s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #faf9f6;
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden; /* Mobile horizontal scroll rokne ke liye */
+    }
+
+    /* ================= NAVBAR ================= */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      z-index: 1000;
+      padding: 12px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .brand-name {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+      line-height: 1;
+    }
+
+    .tagline {
+      font-size: 10px;
+      color: #555;
+      font-weight: 500;
+      display: block;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary);
+    }
+
+    .signup-btn {
+      background: var(--primary);
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .login-btn {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #222;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background: white;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+      z-index: 1100;
+      padding: 80px 30px;
+      transition: 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .mobile-menu a {
+      font-size: 1.1rem;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      min-height: 100vh;
+      padding: 120px 6% 60px;
+      background: linear-gradient(135deg, #fffaf0, #fff);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive Font */
+      line-height: 1.2;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 span { color: var(--primary); }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,107,0,0.2); }
+    .btn-outline { border: 2px solid var(--primary); color: var(--primary); }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* ================= SECTIONS ================= */
+    .career-options, .roadmap { padding: 80px 6%; }
+
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 10px; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      border: 1px solid #f0f0f0;
+    }
+
+    .feature-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+
+    .card-stats { display: flex; justify-content: space-between; margin: 15px 0; font-size: 0.9rem; font-weight: 500; }
+
+    .card-link {
+      background: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: block;
+      text-align: center;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .process-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .process-number {
+      width: 50px; height: 50px; background: var(--primary); color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; font-weight: 700; margin: 0 auto 15px;
+    }
+
+    .cta { background: var(--primary); color: white; padding: 70px 6%; text-align: center; }
+
+    /* ================= FOOTER ================= */
+    footer { background: #111; color: #ddd; padding: 60px 6% 30px; }
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-logo img { height: 35px; margin-bottom: 10px; }
+    .footer-col h4 { color: white; margin-bottom: 20px; }
+    .footer-col a { color: #aaa; text-decoration: none; display: block; margin-bottom: 10px; }
+
+    /* ================= RESPONSIVE ADJUSTMENTS ================= */
+    @media (max-width: 992px) {
+      .hero-container { grid-template-columns: 1fr; text-align: center; gap: 50px; }
+      .hero-content { order: 2; }
+      .hero-image { order: 1; }
+      .hero-buttons { justify-content: center; }
+      .hero-description { margin-left: auto; margin-right: auto; }
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 10px 5%; }
+      .desktop-nav { display: none; }
+      .menu-toggle { display: block; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .footer-container { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-container { grid-template-columns: 1fr; }
+      .hero-buttons .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="navbar">
+  <div class="logo">
+    <img src="./carrer.png" alt="CareerPro Logo">
+    <div>
+      <span class="brand-name">CareerPro</span>
+      <span class="tagline">Build your Future</span>
+    </div>
+  </div>
+
+  <div class="desktop-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="features.html" class="nav-link">Features</a>
+    <a href="carrer.html" class="nav-link active">Careers</a>
+    <a href="jobs.html" class="nav-link">Jobs</a>
+    <a href="../backend/signup.php" class="nav-link signup-btn">Signup</a>
+    <a href="../backend/login.php" class="nav-link login-btn">Login</a>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" onclick="toggleMenu()">×</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="features.html">Features</a>
+  <a href="carrer.html" class="active">Careers</a>
+  <a href="jobs.html">Jobs</a>
+  <a href="../backend/signup.php" class="signup-btn" style="text-align:center;">Signup</a>
+  <a href="../backend/login.php" class="login-btn" style="text-align:center;">Login</a>
+</div>
+
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-compass"></i><span>Find Your Perfect Career Path</span></div>
+      <h1>Discover Your <span>Ideal Career</span></h1>
+      <p class="hero-description">Explore AI‑powered career suggestions, detailed roadmaps, and skill‑based growth plans designed to help you achieve your dream profession.</p>
+      <div class="hero-buttons">
+        <a href="#career-options" class="btn btn-primary"><i class="fas fa-search"></i> Explore Careers</a>
+        <a href="../backend/signup.php" class="btn btn-outline"><i class="fas fa-rocket"></i> Get Started</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://i.pinimg.com/originals/6f/cf/8e/6fcf8e7f2663ce68247b55888bf82a5d.png" alt="Career Guidance">
+    </div>
+  </div>
+</section>
+
+<section id="career-options" class="career-options">
+  <div class="section-header">
+    <h2 class="section-title">Top Career Paths</h2>
+    <p class="section-subtitle">Choose from high-demand careers with comprehensive learning paths</p>
+  </div>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>Data Scientist</h3>
+      <p>Master Python, Machine Learning, and Data Visualization to become an expert in data‑driven decision making.</p>
+      <div class="card-stats"><span><i class="fas fa-dollar-sign"></i> $120K avg</span><span><i class="fas fa-clock"></i> 6-12 mo</span></div>
+      <a href="#" class="card-link">View Roadmap →</a>
+    </div>
+    <div class="feature-card">
+      <h3>Web Developer</h3>
+      <p>Learn HTML, CSS, JavaScript, and backend frameworks to build dynamic, responsive websites and applications.</p>
+      <div class="card-stats"><span><i class="fas fa-dollar-sign"></i> $85K avg</span><span><i class="fas fa-clock"></i> 4-8 mo</span></div>
+      <a href="#" class="card-link">View Roadmap →</a>
+    </div>
+    <div class="feature-card">
+      <h3>UI/UX Designer</h3>
+      <p>Design intuitive interfaces using Figma, Adobe XD, and user‑centric principles to create seamless experiences.</p>
+      <div class="card-stats"><span><i class="fas fa-dollar-sign"></i> $95K avg</span><span><i class="fas fa-clock"></i> 3-6 mo</span></div>
+      <a href="#" class="card-link">View Roadmap →</a>
+    </div>
+  </div>
+</section>
+
+<section class="roadmap">
+  <div class="section-header">
+    <h2 class="section-title">Career Growth Roadmap</h2>
+    <p class="section-subtitle">Your journey to professional success in 4 strategic steps</p>
+  </div>
+  <div class="process-grid">
+    <div class="process-card"><div class="process-number">1</div><h3>Learn Core Skills</h3><p>Start with foundational courses.</p><strong>2-4 months</strong></div>
+    <div class="process-card"><div class="process-number">2</div><h3>Build Projects</h3><p>Apply your knowledge.</p><strong>3-6 months</strong></div>
+    <div class="process-card"><div class="process-number">3</div><h3>Gain Experience</h3><p>Enhance your portfolio.</p><strong>6-12 months</strong></div>
+    <div class="process-card"><div class="process-number">4</div><h3>Advance</h3><p>Move into leadership.</p><strong>Ongoing</strong></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Start Your Journey Today</h2>
+  <p>Join thousands of students discovering their future with CareerPro.</p>
+  <div class="hero-buttons" style="justify-content:center; margin-top:20px;">
+    <a href="../backend/signup.php" class="btn btn-primary" style="background:white; color:var(--primary);">Signup Now</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>CareerPro</h3>
+      <p>Your AI-powered career guidance platform.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="jobs.html">Jobs</a>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a href="../backend/signup.php"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="../backend/signup.php"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="../backend/signup.php"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>careerpro@email.com</p><p>Mumbai, India</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 CareerPro. All Rights Reserved.</p></div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+  }
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById("mobileMenu").classList.remove("active");
+    });
+  });
+</script>
+</body>
+</html>

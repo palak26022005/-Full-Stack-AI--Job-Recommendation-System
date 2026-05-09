@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - CareerPro</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container nav-wrapper">
+
+    <!-- Logo Section -->
+    <div class="logo">
+      <img src="./carrer.png" alt="CareerPro Logo" class="logo-image">
+      <div>
+        <h2 class="brand-name">CareerPro</h2>
+        <small class="tagline">Build your Future</small>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="features.html">Features</a>
+      <a href="career.html">Careers</a>
+      <!-- <a href="jobs.html">Jobs</a> -->
+      <a href="../backend/signup.php" class="signup-btn">Signup</a>
+      <a href="../backend/login.php" class="login-btn">Login</a>
+    </div>
+
+    <!-- Sidebar Menu Button -->
+    <div class="menu-btn" onclick="openSidebar()">☰</div>
+
+  </div>
+</nav>
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<div class="sidebar" id="sidebar">
+  <div class="close-btn" onclick="closeSidebar()">✖</div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="features.html">Features</a>
+  <a href="carrer.html">Careers</a>
+  <!-- <a href="jobs.html">Jobs</a> -->
+  <a href="../backend/signup.php" class="signup-btn">Signup</a>
+  <a href="../backend/login.php" class="login-btn">Login</a>
+</div>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+  <div class="container hero-content">
+
+    <div class="hero-text">
+      <span class="top-text">EMPOWERING CAREERS</span>
+      <h1>
+        Your Next Big 
+        <span class="highlight">Opportunity</span> 
+        Awaits
+      </h1>
+      <p>
+        CareerPro is India's smart AI-powered platform designed to bridge the gap between students and their dream careers. 
+        We don’t just find jobs; we build futures.
+      </p>
+      <div class="hero-buttons">
+        <a href="../backend/signup.php" class="btn-primary">Get Started Now</a>
+        <a href="#" class="btn-outline">How it works</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE SECTION ================= -->
+
+<section class="why">
+  <div class="container">
+
+    <h2>Why Choose <span>CareerPro?</span></h2>
+    <p class="section-subtitle">The smartest way to navigate your professional life.</p>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <h3>AI-Driven Guidance</h3>
+        <p>Our intelligent engine analyzes your profile to suggest paths you'll actually love.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Personalized Roadmaps</h3>
+        <p>Step-by-step plans tailored to your goals — from learning to earning.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Real Opportunities</h3>
+        <p>Direct access to verified job listings from top-tier companies.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Skill Extraction</h3>
+        <p>Upload your resume and let AI do the hard work of identifying your strengths.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="steps">
+  <div class="container">
+
+    <h2>How CareerPro Works</h2>
+
+    <div class="steps-grid">
+
+      <div class="step-card">
+        <span>01</span>
+        <h3>Create Profile</h3>
+        <p>Build your digital identity with your skills and education.</p>
+      </div>
+
+      <div class="step-card">
+        <span>02</span>
+        <h3>AI Analysis</h3>
+        <p>Our model evaluates your data for the perfect career match.</p>
+      </div>
+
+      <div class="step-card">
+        <span>03</span>
+        <h3>Explore Roadmaps</h3>
+        <p>Follow detailed learning paths to become industry-ready.</p>
+      </div>
+
+      <div class="step-card">
+        <span>04</span>
+        <h3>Apply & Succeed</h3>
+        <p>Connect with employers and land your dream role.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="faq">
+  <div class="container">
+
+    <h2>Frequently Asked <span>Questions</span></h2>
+
+    <div class="accordion">
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          What makes CareerPro different?
+          <span>+</span>
+        </div>
+        <div class="accordion-content">
+          We use deep AI analysis rather than simple keyword matching, providing 3x more accurate matches.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          Is CareerPro free to use?
+          <span>+</span>
+        </div>
+        <div class="accordion-content">
+          Yes! Our core career guidance and job searching tools are completely free for students.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          Can I upload my resume?
+          <span>+</span>
+        </div>
+        <div class="accordion-content">
+          Absolutely. Our system supports PDF and DOCX formats for instant AI-based skill extraction.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+  <div class="container">
+    <h2>Start Your Career Journey Today</h2>
+    <p>Join 10,000+ students already discovering their future.</p>
+    <a href="../backend/signup.php" class="btn-white">Signup Now</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container footer-grid">
+
+    <!-- Logo + About -->
+    <div class="footer-logo">
+      <img src="./carrer.png" alt="CareerPro Logo" class="footer-logo-image">
+      <div>
+        <h4 class="footer-brand">CareerPro</h4>
+        <p class="footer-tagline">Build your Future</p>
+      </div>
+      <p class="footer-about">
+        Your AI-powered career guidance platform helping students find the right path to success.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="career.html">Careers</a>
+      <!-- <a href="jobs.html">Jobs</a> -->
+    </div>
+
+    <!-- Account -->
+    <div>
+      <h4>Account</h4>
+      <a href="../backend/signup.php">Signup</a>
+      <a href="../backend/login.php">Login</a>
+      <a href="../backend/dashboard.php">Dashboard</a>
+      <a href="../backend/profile.php">Profile</a>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h4>Contact Info</h4>
+      <p>careerpro@email.com</p>
+      <p>+91 9780310273</p>
+      <p>Punjab, India</p>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    © 2026 CareerPro. All Rights Reserved.
+  </div>
+</footer>
+
+
+<script>
+
+function openSidebar(){
+  document.getElementById("sidebar").classList.add("active");
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closeSidebar(){
+  document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+}
+
+document.querySelectorAll(".accordion-header").forEach(header=>{
+  header.addEventListener("click",()=>{
+    header.parentElement.classList.toggle("active");
+  });
+});
+
+</script>
+
+</body>
+</html>

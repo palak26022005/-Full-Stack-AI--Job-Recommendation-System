@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareerPro - AI Career Platform</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- <style>
+
+
+</style> -->
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header id="navbar">
+<div class="logo">
+<img src="./carrer.png" class="logo-image">
+<div>
+<div class="brand-name">CareerPro</div>
+<div class="tagline">Build your Future</div>
+</div>
+</div>
+
+<nav id="nav-links">
+<span class="close-nav" onclick="toggleMenu()">✕</span> <!-- ✅ ADDED CLOSE BUTTON -->
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+  
+<a href="features.html">Features</a>
+<a href="carrer.html">Careers</a>
+<a href="jobs.html">Jobs</a>
+<a href="../backend/signup.php" class="signup-btn">Signup</a>
+<a href="../backend/login.php" class="login-btn">Login</a>
+</nav>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+<h1 class="hero-title">Build Your <span class="gradient-text">Career Journey</span></h1>
+<p class="hero-description">
+Personalized career paths, AI-powered recommendations, resume analysis and real job opportunities — all in one intelligent platform.
+</p>
+<div class="hero-buttons">
+<a href="../backend/signup.php" class="btn btn-primary">Get Started</a>
+<a href="../backend/login.php" class="btn btn-outline">Explore Careers</a>
+</div>
+</div>
+
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+</div>
+</section>
+
+<!-- ✅ ALL OTHER CONTENT SAME (UNCHANGED) -->
+
+<!-- STATS -->
+<section class="stats">
+<div class="container">
+<div class="stat-box">
+<h2 class="stat-number">10,000+</h2>
+<p>Students Guided</p>
+</div>
+<div class="stat-box">
+<h2 class="stat-number">500+</h2>
+<p>Companies Hiring</p>
+</div>
+<div class="stat-box">
+<h2 class="stat-number">95%</h2>
+<p>Success Rate</p>
+</div>
+<div class="stat-box">
+<h2 class="stat-number">120+</h2>
+<p>Career Paths</p>
+</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Powerful Platform Features</h2>
+<p>Discover tools that accelerate your career growth</p>
+</div>
+
+<div class="feature-grid">
+<div class="feature-card">
+<h3>AI Career Suggestions</h3>
+<p>Smart recommendations based on your skills and interests using advanced machine learning.</p>
+<a href="#" class="card-link">Learn More</a>
+</div>
+
+<div class="feature-card">
+<h3>Resume Analysis</h3>
+<p>Upload resume and extract skills instantly using AI-powered document analysis.</p>
+<a href="#" class="card-link">Learn More</a>
+</div>
+
+<div class="feature-card">
+<h3>Career Roadmaps</h3>
+<p>Step-by-step guide to achieve your dream job with personalized learning paths.</p>
+<a href="#" class="card-link">Learn More</a>
+</div>
+
+<div class="feature-card">
+<h3>Real Job Listings</h3>
+<p>Verified admin-added job opportunities from top companies across industries.</p>
+<a href="#" class="card-link">Learn More</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">How It Works</h2>
+<p>Your journey to career success in 4 simple steps</p>
+</div>
+
+<div class="process-grid">
+<div class="process-card">
+<div class="process-number">1</div>
+<h3>Create Account</h3>
+<p>Sign up and build your professional profile in minutes.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">2</div>
+<h3>Upload Resume</h3>
+<p>Let AI analyze your skills and experience automatically.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">3</div>
+<h3>Get Recommendations</h3>
+<p>Receive personalized career matches instantly.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">4</div>
+<h3>Apply for Jobs</h3>
+<p>Start your journey with confidence and support.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<div class="container">
+<h2>Start Building Your Future Today</h2>
+<p>Join thousands of students who have already transformed their careers with AI-powered guidance.</p>
+
+<div class="cta-buttons">
+<a href="../backend/signup.php" class="btn btn-outline btn-large">Signup Now</a>
+<a href="../backend/login.php" class="btn btn-outline btn-large">Watch Demo</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+<div class="footer-container">
+
+<div class="footer-col">
+<div class="footer-logo"> <!-- ✅ ADDED LOGO -->
+<img src="./carrer.png">
+<h3>CareerPro</h3>
+</div>
+<p>Your AI-powered career guidance platform helping students find the right path to success.</p>
+</div>
+
+<div class="footer-col">
+<h4>Quick Links</h4>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="features.html">Features</a>
+<a href="carrer.html">Careers</a>
+<a href="jobs.html">Jobs</a>
+</div>
+
+<div class="footer-col">
+<h4>Account</h4>
+<a href="../backend/signup.php">Signup</a>
+<a href="../backend/login.php">Login</a>
+<a href="../backend/signup.php">Dashboard</a>
+<a href="../backend/login.php">Profile</a>
+</div>
+
+<div class="footer-col">
+<h4>Contact Info</h4>
+<p>careerpro@email.com</p>
+<p>+91 9780310273</p>
+<p>Punjab, India</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 CareerPro. All Rights Reserved.
+</div>
+
+</div>
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("nav-links").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
